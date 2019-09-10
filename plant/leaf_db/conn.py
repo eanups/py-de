@@ -8,7 +8,7 @@ url_params = {'drivername': 'postgres',
               'username': os.environ.get('DATABASE_USER'),
               'password': os.environ.get('DATABASE_PWD'),
               'host': os.environ.get('DATABASE_HOST', 'localhost'),
-              'port': 5439
+              'port': os.environ.get('DATABASE_PORT')
               }
 
 print(URL(**url_params))
